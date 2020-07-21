@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400&display=swap");
+
+canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 600px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.form-inline > * {
+  margin: 0 10px 0 10px;
+}
+
+p {
+  color: white;
+}
+
+a {
+  color: #12c2e9;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.doodle-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+}
+
+.demo-section {
+  color: #ffffff;
+}
+
+.demo-section p {
+  font-family: "Poppins", sans-serif;
+}
+
+.video-section {
+  width: 100vw;
+  height: 2000px;
+}
+
+.first-para span,
+.second-para span {
+  font-family: "Abril Fatface", cursive;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.video-section p,
+.demo-intro p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: #ffffff;
+  line-height: 2em;
+}
+
+.acknowledgement {
+  margin-bottom: 100px;
+}
+
+.acknowledgement p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.5em;
+}
+
+.acknowledgement h3 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.tv-wrapper {
+  position: relative;
+  left: 150px;
+  top: 200px;
+  width: 800px;
+  height: 800px;
+  /* border: 10px solid tomato; */
+}
+
+#game-video {
+  position: absolute;
+  top: 220px;
+  left: 21px;
+}
+
+#tv-svg {
+  position: absolute;
+  /* z-index: 2000; */
+  width: 700px;
+}
+
+.mac-wrapper {
+  position: relative;
+  left: 1000px;
+  top: -1200px;
+  width: 800px;
+  height: 800px;
+  /* border: 10px solid tomato; */
+}
+
+#data-video {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+#mac-svg {
+  position: absolute;
+  width: 700px;
+}
+
+.first-para {
+  color: #ffffff;
+  position: relative;
+  left: 1000px;
+  top: -600px;
+  width: 800px;
+  height: 800px;
+  padding-top: 200px;
+  /* border: 10px solid tomato; */
+}
+
+.second-para {
+  color: #ffffff;
+  position: relative;
+  left: 150px;
+  top: -400px;
+  width: 800px;
+  height: 800px;
+  padding-top: 20px;
+  /* border: 10px solid tomato; */
+}
+
+/* hide default play button  */
+.vjs-big-play-button {
+  visibility: hidden;
+}
+
+#tv-play-btn {
+  position: absolute;
+  top: 250px;
+  left: 570px;
+  background: #c572ee;
+  background: radial-gradient(hsl(280, 78%, 69%), hsl(280, 78%, 60%));
+  font-size: 1rem;
+  color: #fff;
+  border: solid 1px hsl(280, 78%, 69%);
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+  z-index: 4;
+  outline: none;
+  box-shadow: inset 0 1px 0 hsl(280, 78%, 50%), -2px 2px 0 hsl(280, 78%, 48%),
+    -3px 3px 0 hsl(280, 78%, 46%), -4px 4px 0 hsl(280, 78%, 44%),
+    -5px 5px 0 hsl(280, 78%, 42%), -6px 6px 0 hsl(280, 78%, 40%),
+    -7px 7px 0 hsl(280, 78%, 38%);
+}
+
+#tv-play-btn:hover {
+  cursor: pointer;
+  background: radial-gradient(hsl(280, 78%, 60%), hsl(280, 78%, 50%));
+}
+
+#tv-play-btn:active {
+  background: radial-gradient(hsl(280, 78%, 60%), hsl(280, 78%, 50%));
+  top: 252px;
+  left: 568px;
+  box-shadow: inset 0 1px 0 hsl(280, 78%, 50%), -2px 2px 0 hsl(280, 78%, 48%),
+    -3px 3px 0 hsl(280, 78%, 46%), -4px 4px 0 hsl(280, 78%, 44%),
+    -5px 5px 0 hsl(280, 78%, 42%);
+}
+
+#mac-play-btn {
+  position: absolute;
+  top: 425px;
+  left: 322px;
+  background: #ecd300;
+  background: radial-gradient(hsl(280, 78%, 69%), hsl(280, 78%, 60%));
+  font-size: 1rem;
+  color: #fff;
+  border: solid 1px hsl(280, 78%, 69%);
+  border-radius: 100%;
+  height: 45px;
+  width: 45px;
+  outline: none;
+  box-shadow: inset 0 1px 0 hsl(280, 78%, 50%), 0 2px 0 hsl(280, 78%, 48%),
+    0 3px 0 hsl(280, 78%, 46%), 0 4px 0 hsl(280, 78%, 44%),
+    0 5px 0 hsl(280, 78%, 42%);
+}
+
+#mac-play-btn:hover {
+  background: radial-gradient(hsl(280, 78%, 60%), hsl(280, 78%, 50%));
+}
+
+#mac-play-btn:active {
+  background: radial-gradient(hsl(280, 78%, 60%), hsl(280, 78%, 50%));
+  top: 427px;
+  box-shadow: inset 0 1px 0 hsl(280, 78%, 50%), 0 2px 0 hsl(280, 78%, 48%),
+    0 3px 0 hsl(280, 78%, 46%);
+  outline: none;
+}
