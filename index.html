@@ -24,92 +24,88 @@
   </head>
 
   <body>
-    <div class="doodle-wrapper">
-      <css-doodle>
-        :doodle { @grid: 1 / 100vw; transform: scale(2); background: #1B0617; }
-        background: @m200( linear-gradient( @p(to top, to bottom), @p(#12c2e9,
-        #c471ed, #f64f59), @p(#c471ed, rgba(255, 255, 255, 0)) ) @ms2(@r(0,
-        100%)) / @r(2px) @r(50px) no-repeat );
-      </css-doodle>
-    </div>
     <div class="video-section">
-      <div class="tv-wrapper">
-        <video
-          id="game-video"
-          class="video-js"
-          controls
-          preload="auto"
-          width="510"
-          height="400"
-          poster="assets/tv-thumbnail.jpg"
-          data-setup='{"autoplay": true}'
-        >
-          <source src="videos/game.mp4" type="video/mp4" />
-        </video>
-        <div id="tv-svg">
-          <img src="assets/retro-tv.svg" alt="" />
+      <div class="first-row video-row">
+        <div class="tv-wrapper">
+          <video
+            id="game-video"
+            class="video-js"
+            controls
+            preload="auto"
+            width="510"
+            height="400"
+            poster="assets/tv-thumbnail.jpg"
+            data-setup='{"autoplay": true}'
+          >
+            <source src="videos/game.mp4" type="video/mp4" />
+          </video>
+          <div id="tv-svg">
+            <img src="assets/retro-tv.svg" alt="" />
+          </div>
+          <button type="button" name="button" id="tv-play-btn">Play</button>
         </div>
-        <button type="button" name="button" id="tv-play-btn">Play</button>
-      </div>
 
-      <div class="first-para">
-        <p>
-          <span>Aircraft War, </span>
-          which is a mini-game released on WeChat by Tencent, was all the rage
-          back in 2013.
-        </p>
-        <br />
-        <p>
-          In this shooting game, you can move up, down, left and right to avoid
-          the enemy aircrafts and shoot them as many as possible to win high
-          marks.
-        </p>
-        <br />
-        <p>
-          Bullets are fired automatically at a certain frequency, so you only
-          need to determine the position of your aircraft. The game does not end
-          until you are hit by the enemy.
-        </p>
-        <br />
-      </div>
-
-      <div class="second-para">
-        <p>
-          In the scenario of this mini-game, we applied
-          <span>Deep Q Network (DQN)</span> and effectively trained an
-          intelligent agent that plays the game itself and get the highest score
-          possible.
-        </p>
-        <br />
-        <p>
-          Also, we made it a platform to help beginners in reinforcement
-          learning with their learning process.
-        </p>
-        <br />
-        <p>
-          By adjusting hyperparameters such as reward decay, observations, and
-          epsilon greedy, they could intuitively see how the training process
-          and performance would be affected.
-        </p>
-        <br />
-      </div>
-
-      <div class="mac-wrapper">
-        <video
-          id="data-video"
-          class="video-js"
-          controls
-          preload="auto"
-          width="660"
-          height="400"
-          data-setup="{}"
-        >
-          <source src="videos/data.mp4" type="video/mp4" />
-        </video>
-        <div id="mac-svg">
-          <img src="assets/mac.svg" alt="" />
+        <div class="first-para">
+          <p>
+            <span>Aircraft War, </span>
+            which is a mini-game released on WeChat by Tencent, was all the rage
+            back in 2013.
+          </p>
+          <br />
+          <p>
+            In this shooting game, you can move up, down, left and right to
+            avoid the enemy aircrafts and shoot them as many as possible to win
+            high marks.
+          </p>
+          <br />
+          <p>
+            Bullets are fired automatically at a certain frequency, so you only
+            need to determine the position of your aircraft. The game does not
+            end until you are hit by the enemy.
+          </p>
+          <br />
         </div>
-        <button type="button" name="button" id="mac-play-btn">Play</button>
+      </div>
+
+      <div class="second-row video-row">
+        <div class="second-para">
+          <p>
+            In the scenario of this mini-game, we applied
+            <span>Deep Q Network (DQN)</span> and effectively trained an
+            intelligent agent that plays the game itself and get the highest
+            score possible.
+          </p>
+          <br />
+          <p>
+            Also, we made it a platform to help beginners in reinforcement
+            learning with their learning process.
+          </p>
+          <br />
+          <p>
+            By adjusting hyperparameters such as reward decay, observations, and
+            epsilon greedy, they could intuitively see how the training process
+            and performance would be affected.
+          </p>
+          <br />
+        </div>
+
+        <div class="mac-wrapper">
+          <video
+            id="data-video"
+            class="video-js"
+            controls
+            preload="auto"
+            width="660"
+            height="400"
+            data-setup="{}"
+          >
+            <source src="videos/data.mp4" type="video/mp4" />
+          </video>
+          <div id="mac-svg">
+            <img src="assets/mac.svg" alt="" />
+          </div>
+          <button type="button" name="button" id="mac-play-btn">Play</button>
+        </div>
       </div>
     </div>
 
@@ -144,7 +140,7 @@
         <canvas id="world"></canvas>
       </div>
 
-      <div class="mt-3 flex">
+      <div class="mt-4 flex">
         <form class="form-inline">
           <button
             id="start"
@@ -199,14 +195,19 @@
         </form>
       </div>
 
-      <div class="flex">
-        <div id="scoreChart" style="height: 300px; width: 80%;"></div>
-        <!--<div id="lossChart" style="height: 300px; width: 100%;"></div>
+      <div class="container mt-4">
+        <div class="row justify-content-md-center">
+          <div
+            class="col-md-8 col-sm-8"
+            id="scoreChart"
+            style="height: 270px; width: 50%;"
+          ></div>
+          <!--<div id="lossChart" style="height: 300px; width: 100%;"></div>
       <div id="timeChart" style="height: 300px; width: 100%;"></div>-->
-      </div>
-
-      <div class="mt-5 mb-5">
-        <textarea class="form-control" rows="10" id="settings"></textarea>
+          <div class="col-md-4 col-sm-4">
+            <textarea class="form-control" rows="10" id="settings"></textarea>
+          </div>
+        </div>
       </div>
     </div>
 

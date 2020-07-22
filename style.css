@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400&display=swap");
 
+body {
+  background: url(assets/pattern1.png);
+}
+
 canvas {
   padding-left: 0;
   padding-right: 0;
@@ -19,11 +23,12 @@ canvas {
 }
 
 p {
-  color: white;
+  font-family: "Poppins", sans-serif;
+  color: #333333;
 }
 
 a {
-  color: #12c2e9;
+  color: #e84a5f;
 }
 
 a:hover {
@@ -42,7 +47,7 @@ a:hover {
 }
 
 .demo-section {
-  color: #ffffff;
+  color: #333333;
 }
 
 .demo-section p {
@@ -51,23 +56,7 @@ a:hover {
 
 .video-section {
   width: 100vw;
-  height: 2000px;
-}
-
-.first-para span,
-.second-para span {
-  font-family: "Abril Fatface", cursive;
-  font-size: 2.5rem;
-  color: #ffffff;
-}
-
-.video-section p,
-.demo-intro p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-size: 1.5rem;
-  color: #ffffff;
-  line-height: 2em;
+  /* height: 2000px; */
 }
 
 .acknowledgement {
@@ -76,25 +65,36 @@ a:hover {
 
 .acknowledgement p {
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 1rem;
-  color: #ffffff;
+  color: #111111;
   line-height: 1.5em;
 }
 
 .acknowledgement h3 {
   font-family: "Abril Fatface", cursive;
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #111111;
+}
+
+.video-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0;
+}
+
+.second-row {
+  align-items: flex-start;
 }
 
 .tv-wrapper {
   position: relative;
-  left: 150px;
-  top: 200px;
+  /* left: 10vw;
+  top: 200px; */
   width: 800px;
   height: 800px;
-  /* border: 10px solid tomato; */
+  margin-left: 10vw;
+  /* border: 1px solid tomato; */
 }
 
 #game-video {
@@ -111,11 +111,12 @@ a:hover {
 
 .mac-wrapper {
   position: relative;
-  left: 1000px;
-  top: -1200px;
+  /* right: 10vw;
+  top: -1200px; */
   width: 800px;
   height: 800px;
-  /* border: 10px solid tomato; */
+  margin-right: 10vw;
+  /* border: 1px solid tomato; */
 }
 
 #data-video {
@@ -130,25 +131,58 @@ a:hover {
 }
 
 .first-para {
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333333;
   position: relative;
-  left: 1000px;
-  top: -600px;
-  width: 800px;
-  height: 800px;
-  padding-top: 200px;
-  /* border: 10px solid tomato; */
+  /* left: calc(10vw + 800px);
+  top: -600px; */
+  width: calc(90vw - 800px);
+  margin: auto 5vw;
+  border-radius: 10px;
+  padding: 10px;
+  /* border: 1px solid tomato; */
 }
 
 .second-para {
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333333;
   position: relative;
-  left: 150px;
-  top: -400px;
-  width: 800px;
-  height: 800px;
-  padding-top: 20px;
-  /* border: 10px solid tomato; */
+  /* right: calc(10vw + 800px);
+  top: -400px;  */
+  width: calc(90vw - 800px);
+  margin: 0 5vw;
+  border-radius: 10px;
+  padding: 10px;
+  /* border: 1px solid tomato; */
+}
+
+.first-para span,
+.second-para span {
+  font-family: "Abril Fatface", cursive;
+  font-size: calc(12px + 1vw);
+  color: #333333;
+}
+
+.video-section p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: calc(5px + 1vw);
+  color: #333333;
+  line-height: 2em;
+}
+
+.demo-intro p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: calc(8px + 1vw);
+  color: #444444;
+  line-height: 1.5em;
+}
+
+.demo-section h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 3rem;
+  color: #333333;
 }
 
 /* hide default play button  */
@@ -160,62 +194,63 @@ a:hover {
   position: absolute;
   top: 250px;
   left: 570px;
-  background: #c572ee;
-  background: radial-gradient(hsl(280, 78%, 69%), hsl(280, 78%, 60%));
+  background: hsl(184, 99%, 35%);
+  background: radial-gradient(hsl(184, 99%, 35%), hsl(184, 99%, 25%));
   font-size: 1rem;
   color: #fff;
-  border: solid 1px hsl(280, 78%, 69%);
+  border: solid 1px hsl(184, 99%, 35%);
   border-radius: 100%;
   height: 70px;
   width: 70px;
   z-index: 4;
   outline: none;
-  box-shadow: inset 0 1px 0 hsl(280, 78%, 50%), -2px 2px 0 hsl(280, 78%, 48%),
-    -3px 3px 0 hsl(280, 78%, 46%), -4px 4px 0 hsl(280, 78%, 44%),
-    -5px 5px 0 hsl(280, 78%, 42%), -6px 6px 0 hsl(280, 78%, 40%),
-    -7px 7px 0 hsl(280, 78%, 38%);
+  box-shadow: inset 0 1px 0 hsl(184, 99%, 25%), -2px 2px 0 hsl(184, 99%, 23%),
+    -3px 3px 0 hsl(184, 99%, 21%), -4px 4px 0 hsl(184, 99%, 19%),
+    -5px 5px 0 hsl(184, 99%, 17%), -6px 6px 0 hsl(184, 99%, 15%),
+    -7px 7px 0 hsl(184, 99%, 13%);
 }
 
 #tv-play-btn:hover {
   cursor: pointer;
-  background: radial-gradient(hsl(280, 78%, 60%), hsl(280, 78%, 50%));
+  background: radial-gradient(hsl(184, 99%, 25%), hsl(184, 99%, 15%));
 }
 
 #tv-play-btn:active {
-  background: radial-gradient(hsl(280, 78%, 60%), hsl(280, 78%, 50%));
+  background: radial-gradient(hsl(184, 99%, 25%), hsl(184, 99%, 15%));
   top: 252px;
   left: 568px;
-  box-shadow: inset 0 1px 0 hsl(280, 78%, 50%), -2px 2px 0 hsl(280, 78%, 48%),
-    -3px 3px 0 hsl(280, 78%, 46%), -4px 4px 0 hsl(280, 78%, 44%),
-    -5px 5px 0 hsl(280, 78%, 42%);
+  box-shadow: inset 0 1px 0 hsl(184, 99%, 25%), -2px 2px 0 hsl(184, 99%, 23%),
+    -3px 3px 0 hsl(184, 99%, 21%), -4px 4px 0 hsl(184, 99%, 19%),
+    -5px 5px 0 hsl(184, 99%, 17%);
 }
 
 #mac-play-btn {
   position: absolute;
   top: 425px;
   left: 322px;
-  background: #ecd300;
-  background: radial-gradient(hsl(280, 78%, 69%), hsl(280, 78%, 60%));
+  background: hsl(184, 99%, 35%);
+  background: radial-gradient(hsl(184, 99%, 35%), hsl(184, 99%, 25%));
   font-size: 1rem;
   color: #fff;
-  border: solid 1px hsl(280, 78%, 69%);
+  border: solid 1px hsl(184, 99%, 35%);
   border-radius: 100%;
   height: 45px;
   width: 45px;
   outline: none;
-  box-shadow: inset 0 1px 0 hsl(280, 78%, 50%), 0 2px 0 hsl(280, 78%, 48%),
-    0 3px 0 hsl(280, 78%, 46%), 0 4px 0 hsl(280, 78%, 44%),
-    0 5px 0 hsl(280, 78%, 42%);
+  box-shadow: inset 0 1px 0 hsl(184, 99%, 25%), 0 2px 0 hsl(184, 99%, 23%),
+    0 3px 0 hsl(184, 99%, 21%), 0 4px 0 hsl(184, 99%, 19%),
+    0 5px 0 hsl(184, 99%, 17%);
 }
 
 #mac-play-btn:hover {
-  background: radial-gradient(hsl(280, 78%, 60%), hsl(280, 78%, 50%));
+  cursor: pointer;
+  background: radial-gradient(hsl(184, 99%, 25%), hsl(184, 99%, 15%));
 }
 
 #mac-play-btn:active {
-  background: radial-gradient(hsl(280, 78%, 60%), hsl(280, 78%, 50%));
+  background: radial-gradient(hsl(184, 99%, 25%), hsl(184, 99%, 15%));
   top: 427px;
-  box-shadow: inset 0 1px 0 hsl(280, 78%, 50%), 0 2px 0 hsl(280, 78%, 48%),
-    0 3px 0 hsl(280, 78%, 46%);
+  box-shadow: inset 0 1px 0 hsl(184, 99%, 25%), 0 2px 0 hsl(184, 99%, 23%),
+    0 3px 0 hsl(184, 99%, 21%);
   outline: none;
 }
