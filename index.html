@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Falling Balls</title>
+    <title>Aircraft War</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.9.0"></script>
     <script
@@ -48,8 +48,8 @@
         <div class="first-para">
           <p>
             <span>Aircraft War, </span>
-            which is a mini-game released on WeChat by Tencent, was all the rage
-            back in 2013.
+            a mini-game released on WeChat by Tencent, was all the rage back in
+            2013.
           </p>
           <br />
           <p>
@@ -121,18 +121,15 @@
 
     <div class="container demo-section">
       <div class="mt-5 text-center">
-        <h1>Falling Balls + DQN</h1>
+        <h1>Aircraft War + DQN</h1>
       </div>
 
       <div class="mt-3 col-sm-12 text-center">
         <p>
-          动森活动<br />The game utilizes
-          <a href="http://brm.io/matter-js/">Matter.js</a> while the neural
-          network is built with
-          <a href="https://js.tensorflow.org/">TensorFlow.js</a
-          >.<br />Hyperparameters and settings can be edited below. Code and
-          further details are on
-          <a href="https://github.com/seann999/dodge_tfjs">GitHub</a>.
+          This demo is a modified version based on Seann999’s work built with
+          <a href="https://js.tensorflow.org/">TensorFlow.js</a> (more info at
+          the bottom of this page). You can mess up with all the hyperparameters
+          and settings below to see what interesting things are going to happen.
         </p>
       </div>
 
@@ -197,14 +194,15 @@
 
       <div class="container mt-4">
         <div class="row justify-content-md-center">
-          <div
-            class="col-md-8 col-sm-8"
-            id="scoreChart"
-            style="height: 270px; width: 50%;"
-          ></div>
+          <div class="col-xl-7 col mt-4">
+            <div
+              id="scoreChart"
+              style="height: 270px; width: 618px; margin: auto;"
+            ></div>
+          </div>
           <!--<div id="lossChart" style="height: 300px; width: 100%;"></div>
       <div id="timeChart" style="height: 300px; width: 100%;"></div>-->
-          <div class="col-md-4 col-sm-4">
+          <div class="col-xl-5 col mt-4">
             <textarea class="form-control" rows="10" id="settings"></textarea>
           </div>
         </div>
@@ -219,18 +217,29 @@
         <p>
           For the python version, thanks to Kill-Console’s reproduced source
           code for the game
-          <a href="https://github.com/Kill-Console/PythonShootGame"
+          <a
+            href="https://github.com/Kill-Console/PythonShootGame"
+            target="_blank"
             >Aircraft War</a
           >, <br />as well as
           <a
             href="https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow/tree/master/contents/5_Deep_Q_Network"
+            target="_blank"
             >MorvanZhou’s DQN code sample</a
           >. <br />For the javascript version, we are grateful to the ideas and
           codes provided by Seann999. His
-          <a href="https://github.com/seann999/dodge_tfjs">project</a> really
-          inspired us a lot. <br />Without them, it would never be possible for
-          us to build this platform in such a short time after high school
-          graduation.
+          <a href="https://github.com/seann999/dodge_tfjs" target="_blank"
+            >project</a
+          >
+          really inspired us a lot. <br />Without them, it would never be
+          possible for us to build this platform in such a short time after high
+          school graduation. <br />
+          This website is crafted by
+          <a href="https://github.com/unicar9" target="_blank">unicar</a>
+        </p>
+        <p>
+          Made with <span id="heart" style="color: #e25555;">&#9829;</span> by
+          <a href="https://twitter.com/VMaggieee" target="_blank">@VMaggieee</a>
         </p>
       </div>
     </div>
