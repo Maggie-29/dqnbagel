@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400&display=swap");
 
 body {
-  background: url(assets/pattern1.png);
+  background: url(assets/pattern4.png);
 }
 
 canvas {
@@ -171,7 +171,8 @@ a:hover {
   line-height: 2em;
 }
 
-.demo-intro p {
+.demo-intro p,
+.demo-description p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: calc(8px + 1vw);
